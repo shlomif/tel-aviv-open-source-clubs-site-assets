@@ -1,0 +1,84 @@
+<HTML>
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+<HEAD>
+<TITLE> Moves itself to RAM for actual work</TITLE>
+</HEAD>
+<!-- ************************************************************** -->
+<BODY bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<!-- ---- Top Navigation Bar ------------------------------------- BEGIN 
+  $Id: big_blue-top.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+-------------------------------------------------------------------- -->
+<!--
+  *** This text is included just below the BODY line in all HTML pages
+  $Id: big_blue-top.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+  $Revision: 1.2 $
+  $Date: 2001/12/06 21:38:12 $
+-->
+<!-- <FONT SIZE=+6> -->
+
+<TABLE bgcolor="#FFFF99" WIDTH=100%  BORDER=0 CELLSPACING=0>
+<TR>
+  <TD bgcolor="#FFFF99" valign=center WIDTH=20% >
+     <a href="http://www.helicontech.co.il"><img src="title.gif" border=0></a>
+  </TD>
+  <TD align=right valign=top WIDTH=10% bgcolor="#FFFF99">
+     5
+  </TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<TABLE>
+
+<TR>
+  <TD colspan=3 >
+    Next:  <a href="slide0006.htm"> Minimum peripheral initialization</a>
+    &nbsp;&nbsp;Previous:  <a href="slide0004.htm">Usually starts from ROM (Flash)</a>
+     &nbsp;&nbsp;Contents: <a href="slide0000.htm">Index</a>
+  </td>
+</TR>
+</TABLE>
+<P>
+<HR>
+<!-- ---- Top Navigation Bar ---------------------------------- END -->
+<a name=" Moves itself to RAM for actual work">
+<center>
+<H1> Moves itself to RAM for actual work
+</H1></center>
+
+
+<P>
+We now have RAM and Stack pointer and ready to do the real work. First of all since Flash memory is usually scarce resource and much slower then RAM, we move the actual bootloader code to RAM for actual execution. In many cases Flash memory is located in an address space that is not executable, for example serial flash that you can access by reading repeatativly from one address. Also in many cases, the actual bootloader code is compressed so it must first be uncompressed and then written to RAM.
+</P>
+<!-- ---- Bottom Navigation Bar ---------------------------------- BEGIN 
+  $Id: big_blue-bot.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+-------------------------------------------------------------------- -->
+<HR SIZE=8>
+
+</FONT>
+<TABLE WIDTH=100%  BORDER=0 CELLSPACING=0 CELLPADDING=2>
+<TR>
+
+  <TD  WIDTH=10%>
+     Next:<br>
+     Previous:<br>
+     Contents:<br> 
+<!--     Index:<br> -->
+  </TD>
+  <TD >
+     <a href="slide0006.htm"> Minimum peripheral initialization</a><br>
+     <a href="slide0004.htm">Usually starts from ROM (Flash)</a><br>
+     <a href="slide0000.htm">Index</a><br> 
+<!--     Index</a><br> -->
+  </TD>
+ <TD VALIGN=top ALIGN=right ><SMALL>
+    Prepared by <a href="http://www.helicontech.co.il">Ori Idan Helicon technologies</a>
+    </SMALL>
+ </TD>
+
+</TR>
+</TABLE>
+<!-- ---- Bottom Navigation Bar -------------------------------- END -->
+</BODY>
+</HTML>

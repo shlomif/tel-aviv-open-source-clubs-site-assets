@@ -1,0 +1,89 @@
+<HTML>
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+<HEAD>
+<TITLE> Starting Linux</TITLE>
+</HEAD>
+<!-- ************************************************************** -->
+<BODY bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<!-- ---- Top Navigation Bar ------------------------------------- BEGIN 
+  $Id: big_blue-top.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+-------------------------------------------------------------------- -->
+<!--
+  *** This text is included just below the BODY line in all HTML pages
+  $Id: big_blue-top.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+  $Revision: 1.2 $
+  $Date: 2001/12/06 21:38:12 $
+-->
+<!-- <FONT SIZE=+6> -->
+
+<TABLE bgcolor="#FFFF99" WIDTH=100%  BORDER=0 CELLSPACING=0>
+<TR>
+  <TD bgcolor="#FFFF99" valign=center WIDTH=20% >
+     <a href="http://www.helicontech.co.il"><img src="title.gif" border=0></a>
+  </TD>
+  <TD align=right valign=top WIDTH=10% bgcolor="#FFFF99">
+     15
+  </TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<TABLE>
+
+<TR>
+  <TD colspan=3 >
+    Next:  <a name="xx"></a>
+    &nbsp;&nbsp;Previous:  <a href="slide0014.htm"> Transfer control to OS kernel in RAM</a>
+     &nbsp;&nbsp;Contents: <a href="slide0000.htm">Index</a>
+  </td>
+</TR>
+</TABLE>
+<P>
+<HR>
+<!-- ---- Top Navigation Bar ---------------------------------- END -->
+<a name=" Starting Linux">
+<center>
+<H1> Starting Linux
+</H1></center>
+
+
+<P>
+Until now we concentrated on the bootloader itself and what we discussed in general for all operating system, now we will discuss specific features needed to boot linux. Linux was created as an operating system for desktop or server, it was later adopted for embedded system environments and is thus different from other Embedded operating systems.
+</P>
+
+
+<P>
+Linux must have a file system, this makes programming an embedded linux application easier as it is similar to programming a desktop application, you simply compile your program to a file linked with the appropriate libraries and then run this file. In other embedded operating system you link your application with the kernel itself and thus you actually write a kernel application. However since Linux must have a file system and embedded systems usually does not even have a disk, we use a RAM disk image of the file system. This RAM disk image can be included in the Kernel image as another section in the object file or used as a seperate file. The bootloader must know how to handle it. It must extract the file system image and put it in a certain known RAM location before it trasfers control to the kernel.
+</P>
+<!-- ---- Bottom Navigation Bar ---------------------------------- BEGIN 
+  $Id: big_blue-bot.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+-------------------------------------------------------------------- -->
+<HR SIZE=8>
+
+</FONT>
+<TABLE WIDTH=100%  BORDER=0 CELLSPACING=0 CELLPADDING=2>
+<TR>
+
+  <TD  WIDTH=10%>
+     Next:<br>
+     Previous:<br>
+     Contents:<br> 
+<!--     Index:<br> -->
+  </TD>
+  <TD >
+     <a name="xx"></a><br>
+     <a href="slide0014.htm"> Transfer control to OS kernel in RAM</a><br>
+     <a href="slide0000.htm">Index</a><br> 
+<!--     Index</a><br> -->
+  </TD>
+ <TD VALIGN=top ALIGN=right ><SMALL>
+    Prepared by <a href="http://www.helicontech.co.il">Ori Idan Helicon technologies</a>
+    </SMALL>
+ </TD>
+
+</TR>
+</TABLE>
+<!-- ---- Bottom Navigation Bar -------------------------------- END -->
+</BODY>
+</HTML>

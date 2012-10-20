@@ -1,0 +1,365 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1255">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../lin-club.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Slide 1</title>
+<meta name=Description content="24/12/2002: מועדון ה-Linux">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.15in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {
+		sld.style.visibility="visible"
+		return
+	}
+	if( MakeNotesVis() ) return
+	runAnimations = _InitAnimations();
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+function MakeSldVis()
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis()
+{
+	if( !IsNts() ) return false
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) {
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.getAttribute("filter")!="" }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+		if( g_animItemsToHide ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+	return g_animUseRuntime;
+}
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="2"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:white' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:383px;font-size:16px;background-color:#333399;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="780,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master03.xml">
+ <v:background id="_x0000_s2049" o:bwmode="white" fillcolor="#339 [5]"/>
+ <![if !ppt]><p:shaperange href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s2063" type="#_x0000_m1026"
+  style='position:absolute;left:45.5pt;top:0;width:702pt;height:78pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <v:textbox style='mso-text-scale:0'/>
+  <p:placeholder type="title"/></v:shape>
+ <div dir=RTL v:shape="_x0000_s2063" class=T style='direction:rtl;position:
+ absolute;top:-1.04%;left:6.85%;width:88.26%;height:15.14%'><span lang=HE
+ style='font-family:"Guttman Yad-Brush";mso-bidi-font-family:"Guttman Yad-Brush";
+ mso-hansi-font-family:Arial;font-size:123%;color:yellow'>מועדון ה-</span><span
+ style='font-family:"Comic Sans MS";mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:"Guttman Yad-Brush";mso-hansi-font-family:"Comic Sans MS";
+ font-size:123%;color:yellow' dir=ltr>Linux</span></div>
+ <p:shaperange href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s2054"
+  type="#_x0000_m1027" style='position:absolute;left:39pt;top:102pt;width:344.5pt;
+  height:228pt' o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+  filled="f" fillcolor="white" stroked="f" strokecolor="black">
+  <v:fill color2="white" o:detectmouseclick="f"/>
+  <v:stroke joinstyle="miter" o:forcedash="f"/>
+  <v:imagedata src="slide0001_image001.jpg" o:title="penguins"/>
+  <v:shadow color="gray"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t" text="t" grouping="f"/>
+  <p:placeholder type="object" position="1" size="half"/></v:shape><![if !vml]><img
+ border=0 v:shapes="_x0000_s2054" src="slide0001_image002.jpg"
+ style='position:absolute;top:18.79%;left:5.05%;width:44.22%;height:42.29%'><![endif]><v:shapetype
+  id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s2060" type="#_x0000_t202" style='position:absolute;
+  left:384pt;top:1in;width:376.5pt;height:406.75pt;mso-wrap-style:square;
+  v-text-anchor:top' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t' inset="2.53978mm,1.2699mm,2.53978mm,1.2699mm"/>
+ </v:shape><v:shape id="_x0000_s2065" type="#_x0000_t202" style='position:absolute;
+  left:13pt;top:342pt;width:390pt;height:93.75pt;mso-wrap-style:square;
+  v-text-anchor:top' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t' inset="2.53978mm,1.2699mm,2.53978mm,1.2699mm"/>
+ </v:shape><v:shape id="_x0000_s2066" type="#_x0000_t202" style='position:absolute;
+  left:0;top:489.5pt;width:780pt;height:50.5pt;mso-wrap-style:square;
+  v-text-anchor:top' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t' inset="2.53978mm,1.2699mm,2.53978mm,1.2699mm"/>
+ </v:shape>
+ <div v:shape="_x0000_s2060" class=O>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:13.31%;left:50.18%;width:46.57%;height:6.52%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:133%;color:yellow'>מארח את&#13;</span></div>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:23.23%;left:50.18%;width:46.57%;height:12.53%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:267%;color:yellow'>מולי בן-יהודה&#13;</span></div>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:37.33%;left:50.18%;width:46.57%;height:6.52%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:133%;color:yellow'>בנושא</span><span style='font-family:"Comic Sans MS";
+ mso-ascii-font-family:"Comic Sans MS";mso-bidi-font-family:FrankRuehl;
+ mso-hansi-font-family:"Comic Sans MS";font-size:133%;color:yellow;display:
+ none' dir=ltr>&#13;</span></div>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:47.51%;left:49.09%;width:48.55%;height:13.05%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:278%;color:yellow'>התחברות לאינטרנט&#13;</span></div>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:61.87%;left:50.18%;width:46.57%;height:6.52%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:133%;color:yellow'><span style='mso-spacerun:yes'> </span>(טלפון,
+ כבלים ו- </span><span style='font-family:"Comic Sans MS";mso-ascii-font-family:
+ "Comic Sans MS";mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:133%;color:yellow' dir=ltr>ADSL</span><span lang=HE
+ style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:133%;color:yellow'>)&#13;</span></div>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:70.49%;left:48.73%;width:49.27%;height:7.83%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:167%;color:yellow'>יום שני (30 בדצמבר) שעה 18:00 &#13;</span></div>
+ <div dir=RTL style='text-align:center;mso-line-spacing:"100 50 0";direction:
+ rtl;position:absolute;top:80.41%;left:48.55%;width:49.81%;height:7.83%'><span
+ lang=HE style='font-family:FrankRuehl;mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:167%;color:yellow'>אוני' ת&quot;א - בניין שרייבר חדר 008</span><span
+ style='font-family:"Comic Sans MS";mso-ascii-font-family:"Comic Sans MS";
+ mso-bidi-font-family:FrankRuehl;mso-hansi-font-family:"Comic Sans MS";
+ font-size:167%;color:yellow;mso-special-format:lastCR;display:none' dir=rtl>&#13;</span></div>
+ </div>
+ <div dir=RTL v:shape="_x0000_s2065" class=O style='text-align:center;
+ mso-line-spacing:"100 50 0";direction:rtl'><span style='position:absolute;
+ top:64.22%;left:1.26%;width:50.9%;height:3.91%'><span lang=HE
+ style='font-family:Arial;mso-bidi-font-family:Arial;color:yellow'>מועדון ה- </span><span
+ style='color:yellow' dir=ltr>linux</span><span lang=HE style='font-family:
+ Arial;mso-bidi-font-family:Arial;color:yellow'> מעביר הרצאות חינם (המיועדות </span></span><span
+ style='position:absolute;top:68.14%;left:1.26%;width:50.9%;height:3.91%'><span
+ lang=HE style='font-family:Arial;mso-bidi-font-family:Arial;color:yellow'>למתחילים
+ ואין צורך בידע מוקדם) בימי שני אחת </span></span><span style='position:absolute;
+ top:72.32%;left:2.52%;width:48.37%;height:3.91%'><span lang=HE
+ style='font-family:Arial;mso-bidi-font-family:Arial;color:yellow'>לשבועיים.</span><span
+ style='color:yellow' dir=ltr><span dir=rtl></span> </span><span lang=HE
+ style='font-family:Arial;mso-bidi-font-family:Arial;color:yellow'>פרטים באתר:</span><span
+ lang=HE style='font-family:Arial;mso-bidi-font-family:Arial;color:#99FF99'> </span></span><span
+ style='position:absolute;top:75.45%;left:2.52%;width:48.37%;height:4.96%'><span
+ style='font-family:"Comic Sans MS";mso-ascii-font-family:"Comic Sans MS";
+ color:#99FF99' dir=ltr>http://www.cs.tau.ac.il/lin-club</span><span lang=HE
+ style='font-family:Arial;mso-ascii-font-family:"Comic Sans MS";mso-bidi-font-family:
+ Arial;color:#99FF99;mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ <div dir=RTL v:shape="_x0000_s2066" class=O style='text-align:center;
+ mso-line-spacing:"100 50 0";direction:rtl'><span style='position:absolute;
+ top:91.64%;left:-3.79%;width:107.76%;height:3.91%'><span lang=HE
+ style='font-family:Arial;mso-bidi-font-family:Arial;color:yellow'>מולי בן
+ יהודה הינו מפתח מספר שנים בפרויקטים שונים של קוד פתוח וכן שותף בכתיבה ובתחזוקה
+ של<span style='mso-spacerun:yes'>  </span></span></span><span
+ style='position:absolute;top:95.56%;left:.9%;width:98.37%;height:3.91%'><span
+ style='color:yellow' dir=ltr>HOWTO-BEZEQ-ADSL</span></span></div>
+</p:slide></div>
+
+</body>
+
+</html>

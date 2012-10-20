@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>content</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-8-i">
+  </head>
+  <body dir="rtl">
+<h1>אלפא</h1>
+<ul>
+<li>לכל שכבה יש ערוץ נוסף, מלבד ערוצי הכחול, האדום והירוק, שמציין אטימות/שקיפות.</li>
+<li>ניתן להתייחס לאלפא כאל שכבה בגווני אפור, כאשר 255 נותן אטימות מלאה, ו-0 שקיפות מלאה.</li>
+<li>ערך הצבע המוצג בכל פיקסל בשכבה בעלת ערוץ אלפא מחושב כך:<br/>
+Result=(1-alpha/255)*PixelBelow + (alpha/255)*CurrentPixel</li>
+<li>ניתן להצמיד אלפא לשכבה בדרך נוספת - באמצעות layer mask, אותה קל יותר לערוך.</li>
+<li>ניתן להשתמש ב-gradients כ-layer mask ובכך ליצור אפקטים מעניינים של "דעיכה".</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<HTML>
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+<HEAD>
+<TITLE> PC boot sequence</TITLE>
+</HEAD>
+<!-- ************************************************************** -->
+<BODY bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<!-- ---- Top Navigation Bar ------------------------------------- BEGIN 
+  $Id: big_blue-top.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+-------------------------------------------------------------------- -->
+<!--
+  *** This text is included just below the BODY line in all HTML pages
+  $Id: big_blue-top.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+  $Revision: 1.2 $
+  $Date: 2001/12/06 21:38:12 $
+-->
+<!-- <FONT SIZE=+6> -->
+
+<TABLE bgcolor="#FFFF99" WIDTH=100%  BORDER=0 CELLSPACING=0>
+<TR>
+  <TD bgcolor="#FFFF99" valign=center WIDTH=20% >
+     <a href="http://www.helicontech.co.il"><img src="title.gif" border=0></a>
+  </TD>
+  <TD align=right valign=top WIDTH=10% bgcolor="#FFFF99">
+     10
+  </TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<TABLE>
+
+<TR>
+  <TD colspan=3 >
+    Next:  <a href="slide0011.htm"> Prepare parameters for OS loading</a>
+    &nbsp;&nbsp;Previous:  <a href="slide0009.htm"> Allow manual intervention</a>
+     &nbsp;&nbsp;Contents: <a href="slide0000.htm">Index</a>
+  </td>
+</TR>
+</TABLE>
+<P>
+<HR>
+<!-- ---- Top Navigation Bar ---------------------------------- END -->
+<a name=" PC boot sequence">
+<center>
+<H1> PC boot sequence
+</H1></center>
+
+
+<P>
+PC's have a different boot sequence, First a ROM BIOS starts that give minimal configuration to peripherals, usually just configuring the screen and keyboard. It then looks in its tables (CMOS RAM) for a boot device. From the specified boot device it loads to RAM the first stage (from MBR) control is transferred to first stage, fist stage bootloader loads the second stage that usually displays the boot menu. The user selects the OS to boot or a default OS is booted after a speficied time. In this stage the user have the option to add boot parameters to kernel. In several cases, the bootloader does not know how to load the OS and transfers the control to another bootloader, this is called chain loading, this is usually done when LILO or GRUB needs to load windows.
+</P>
+<!-- ---- Bottom Navigation Bar ---------------------------------- BEGIN 
+  $Id: big_blue-bot.tpl,v 1.2 2001/12/06 21:38:12 lorenz Exp $
+-------------------------------------------------------------------- -->
+<HR SIZE=8>
+
+</FONT>
+<TABLE WIDTH=100%  BORDER=0 CELLSPACING=0 CELLPADDING=2>
+<TR>
+
+  <TD  WIDTH=10%>
+     Next:<br>
+     Previous:<br>
+     Contents:<br> 
+<!--     Index:<br> -->
+  </TD>
+  <TD >
+     <a href="slide0011.htm"> Prepare parameters for OS loading</a><br>
+     <a href="slide0009.htm"> Allow manual intervention</a><br>
+     <a href="slide0000.htm">Index</a><br> 
+<!--     Index</a><br> -->
+  </TD>
+ <TD VALIGN=top ALIGN=right ><SMALL>
+    Prepared by <a href="http://www.helicontech.co.il">Ori Idan Helicon technologies</a>
+    </SMALL>
+ </TD>
+
+</TR>
+</TABLE>
+<!-- ---- Bottom Navigation Bar -------------------------------- END -->
+</BODY>
+</HTML>

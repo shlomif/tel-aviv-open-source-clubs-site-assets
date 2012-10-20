@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>content</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-8-i">
+    <script type="text/javascript">
+    function setdisplay(keyword)
+    {
+        document.getElementById("answer").style.display=keyword;
+    }
+    </script>
+  </head>
+  <body dir="rtl">
+<h1>בהירות וחדות</h1>
+<div>כיצד ניתן להגדיל/להקטין את בהירות התמונה או את חדותה?</div>
+<ul style="display: none" id="answer">
+<li>ניתן להגדיל או להקטין את הבהירות ע"י הוספה או החסרה של כמות מסויימת מערכו של כל פיקסל.</li>
+<li>ניתן להגדיל את החדות על ידי הכפלה של ערך כל אחד מהפיקסלים בפקטור. אם הוא גדול מ-1, החדות גדלה. אם הוא קטן מ-1, החדות קטנה.</li>
+<li>בפועל משתמשים בפונקציה לא לינארית, שדוחסת את הערכים לכיוון אמצע ההיסטוגרמה או לכיוון צידי ההיסטוגרמה.</li>
+</ul>
+<div> <a href="javascript:setdisplay('block')">הצג</a> <a href="javascript:setdisplay('none')">הסתר</a></div>
+</body>
+</html>

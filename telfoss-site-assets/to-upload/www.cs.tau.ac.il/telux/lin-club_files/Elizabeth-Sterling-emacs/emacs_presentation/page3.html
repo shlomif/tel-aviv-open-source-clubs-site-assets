@@ -1,0 +1,118 @@
+<head><TITLE>emacs presentation -- Page 3</TITLE>
+<link href="emacspres.css" rel="StyleSheet" type="text/css">
+</head>
+<body>
+<h1>Commanding Emacs</h1>
+
+   <p>Emacs has commands that make it do things. People rarely use the
+   full commands, however. Instead, you will generally use Key
+   Sequences.</p><p style="float:right"><a href="page4.html">move on...</a></p>
+
+   <li>Quit Emacs: 'C-x C-c'</li>
+<DIV class="holder1"> <div class="commands">
+   <h2>Buffers and Windows</h2>
+              <ul>
+	       <li> Open a file, existing or new: 'C-x C-f'- then type the file name.</li>
+	       <li> Save buffer: 'C-x C-s'</li>
+	       <li> Save buffer as a different file (Save As): 'C-x C-w'</li>
+	       <li> Save all open buffers: 'C-x s'</li>
+	       <li> Insert a file into buffer: 'C-x i'</li>
+	       <li> Insert and replace file: 'C-x C-v'</li>
+	       <li> Kill (close) a buffer: 'C-x k'</li>
+	       <li> Split window: 'C-x 2'</li>
+	       <li> Unsplit windows (maximize selected window, within its frame): 'C-x 1'</li>
+	       <li> Select next window: 'C-x o'</li>
+	       <li> Switch to another buffer: 'C-x b'</li>
+	       <li> Buffer menu (list of buffers): 'C-x C-b' - save,
+	       delete, open rename buffers</li>
+	       </ul>
+  </div>
+<DIV class="commands">
+    <h2>Cursor Motion</h2>
+           <ul>
+	   <li> Forward a character: 'C-f'</li>
+	   <li> Backward a charcter: 'C-b'</li>
+	   <li> Forward a line: 'C-n'</li>
+	   <li> Backward a line: 'C-p'</li>
+	   <li> Go to the beginning of the line: 'C-a'</li>
+	   <li> Go to the end of the line: 'C-e'</li>
+	   <li> Forward a word: 'M-f'</li>
+	   <li> Backward a word: 'M-b'</li>
+	   <li> Forward a sentence: 'M-e'</li>
+	   <li> Backward a sentence: 'M-a'</li>
+	   <li> Go to the beginning of the buffer: `M-<'</li>
+	   <li> Go to the end of the buffer: `M->'</li>
+	   </ul>
+</DIV>
+  <DIV class="commands">   <h2>Undoing</h2>
+           <ul>
+           <li> undo: 'C-x u', 'C-_'. 'C-/'</li>
+	   <li> redo: 'C-g C-x u'</li>
+	   </ul>
+</DIV>
+<DIV class="commands">
+     <h2>Canceling</h2>
+        <ul>
+	<li> cancel current operation: 'C-g'</li>
+	<li> if that doesn't happen to work (abort or exit recursive edit): `C-]', `C-M-c'</li>
+	<li> or 'M-x top-level'</li>
+	</ul>
+    </DIV>
+</DIV>
+
+<DIV class="holder2">
+  <DIV class="commands"> <h2> Whitespace Edits</h2>
+    <ul>
+    <li> Indent current line: TAB</li>
+    <li> Shift a block of lines rigidly right or left: C-x TAB</li>
+    <li> Fill (justify) paragraph: `M-q;</li>
+    <li> Add a new line after this one: 'RET'</li>
+    <li> Open a new line before this one: 'C-o'</li>
+    <li> Remove all but 1 empty line: 'C-x C-o'</li>
+    <li> Remove all but 1 space: 'M-SPC'</li>
+    </ul>
+</DIV>
+
+   <DIV class="commands"> 
+	<h2>Deleting</h2>
+    <ul>
+    <li> Delete character backward: 'DEL'</li>
+    <li> Delete character forward: 'C-d'</li>
+    <li> Delete word backward: 'M-DEL'</li>
+    <li> Delete word forward: 'M-D'</li>
+    <li> Delete to end of line: 'C-k'</li>
+    <li> Delete entire line: 'C-S-DEL'</li>
+    <li> Delete to end of sentence: 'M-k'</li>
+    </ul>
+</DIV>
+
+<DIV class="commands">
+    <h2>Copy, cut, paste, select all, ...</h2>
+    <ul>
+     <li> Set mark: 'C-SPC', 'C-@'</li>
+     <li> Select entire buffer: 'C-x h'</li>
+     <li> Select page: 'C-x C-p'</li>
+     <li> Exchange TextCursor position point and mark: 'C-x C-x'</li>
+     <li> Copy text after setting mark: 'C-Insert', 'M-w'</li>
+     <li> Cut text after setting mark: 'C-w'</li>
+     <li> Paste ("yank") text: 'C-y'</li>
+     <li> Replace just pasted text with text copied or cut earlier: 'M-y'</li>
+     </ul>
+</DIV>
+<DIV class="commands">
+    <h2> Other Simple Editing</h2>
+    <ul> 
+     <li> Make word uppercase: 'M-u'</li>
+     <li> Make word lowercase: 'M-1'</li>
+     <li> Capitalize word (first character): 'M-c'</li>
+     <li> Transpose (swap) adjecent characters: 'C-t'</li>
+     <li> Transpose adjecent words: 'M-t'</li>
+     <li> Transpose lines: 'C-x, C-t'</li>
+     <li> Move line 2 lines forward: 'C-u 2 C-x -Ct'</li>
+     <li> Join previous line: 'M-^'</li>
+     <li> Join next line: 'C-1 M-^'</li>
+    </ul></DIV>
+</DIV>
+
+
+</body>

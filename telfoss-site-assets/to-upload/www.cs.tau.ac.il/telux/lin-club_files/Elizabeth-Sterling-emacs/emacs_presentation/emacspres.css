@@ -1,0 +1,21 @@
+.commands {
+	border: 1px dashed #0D08A2;
+	margin: 10px;
+	width: 450px;
+;
+}
+.holder{
+     width: 600px;
+}
+.holder1 {
+	position: absolute;
+	left: 5px;
+	margin: 10px;
+}
+.holder2{
+
+	border: 2px;
+	position: absolute;
+	left: 455px;
+	margin: 10px;
+}

@@ -1,0 +1,53 @@
+<head><TITLE>emacs presentation -- Page 1</TITLE>
+<link href="emacspres.css" rel="StyleSheet" type="text/css">
+</head>
+<body>
+
+<div class="holder">
+
+<h2>Here is a translation to/from Emacs-speak:</h2>
+<table>
+<tr><td>Common Term</td><td>Emacs Term</td></tr>
+<tr><td>selectio</td><td>region</td></tr>
+<tr><td>cut</td><td>kill</td></tr>
+<tr><td>paste</td><td>yank</td></tr>
+<tr><td>window</td><td>frame</td></tr>
+<tr><td>pane</td><td>window</td></tr>
+<tr><td>shortcut</td><td>key sequence</td></tr>
+<tr><td>wrap</td><td>fill</td></tr></table>
+
+<h2>In Emacs terms:</h2>
+<ul>
+    <li> A window is a frame pane, that is, a subframe.</li>
+    <li> The mode-line is the text at the bottom border of a window.</li>
+    <li> The minibuffer is the special buffer for entering commands; it appears either in a separate frame or at the bottom of each frame.</li>
+    <li> The TextCursor shows where you insert typed text. By default, the cursor is rectangular, but you can change that.</li>
+    <li> The MousePointer shows the mouse position. By default, it is an arrow, but you can change that.</li>
+    <li> The position of the TextCursor at any time is called Point. For example, if the cursor is on the third character in a buffer, then point = 3. See Region for more about Point.</li>
+    <li> Mouse buttons are called 'mouse-1', 'mouse-2', and 'mouse-3' (left to right, usually). These are sometimes written 'MB1', н└MB2', and н└MB3'.</li>
+    <li> A key binding is a mapping (relation) between a command and a key sequence. The same command can be bound to more than one key sequence; A key sequence is only the binding of at most one command.</li></ul>
+
+Note: Menu items and mouse actions are also sometimes referred to as key sequences. If you are prompted for a key sequence, you can usually point to a menu item or perform a mouse action (e.g. click MB1) instead of using the keyboard.
+Emacs-Speak Example
+
+If you can follow this example, you understand Emacs-speak. If you understand all the actions described, you pretty-much understand how to use Emacs. Good luck :D !
+<ol>
+   <li> I saved buffer foobar to its file using key sequence 'C-x C-s', which is bound to command 'save-buffer'.</li>
+   <li> Having forgotten the key binding and the complete name for command 'split-window-horizontally', I used key sequence 'M-x' (by pressing the Alt key while typing x), then typed s p l i t - w i n. My input appeared in the minibuffer: split-win.</li>
+   <li> I hit the 'TAB' key, and the minibuffer input was partially completed to split-window, meaning that there is a command whose name begins with 'split-window'.</li>
+   <li> I hit the 'TAB' key again, and a minibuffer message next to my echoed input said '[Complete, but not unique]', telling me that н└split-window' is the complete name of a command, but also that there are other commands whose names begin with н└split-window'.</li>
+   <li> I hit the 'TAB' key again. This opened a new window in the same frame, displaying the '*Completions*' buffer, which showed several command names beginning with 'split-window<code>". I clicked the command name <body>split-window-horizontally, using 'mouse-2'.</li>
+   <li> The '*Completions*' buffer (and its window) disappeared, and the
+   frame was divided into two windows, side by side - they each displayed buffer 'foobar'. This was the result of executing command 'split-window-horizontally' in the window of buffer 'foobar'.</li>
+   <li> Next, I split the left window, using command
+   'split-window-vertically' - or, rather, I used its key binding,
+   which is key sequence 'C-x 2' (which I happened to remember). At
+   this point, the frame had three windows, each containing buffer
+   'foobar': I could see the name 'foobar' in the mode-line of each window.</li>
+   <li> I clicked 'mouse-1' in the top left window, to put the text cursor -and the focus of attention - there. Then I visited file 'toto' there, by using key sequence 'C-x C-f' (which is bound to command 'find-file'). I could tell by the name in the window's mode-line that its buffer was now 'toto'. I dragged the mode-line using 'mouse-1', to resize buffer 'toto's window in the frame.</li>
+   <li> In buffer 'toto', I dragged 'mouse-1' over some text, to select the text as the active region. I used key sequence 'C-w' to kill the region's text.</li>
+  <li> I clicked 'mouse-1' in buffer 'foobar'. This moved the (text) cursor to where the (mouse) pointer was when I clicked. I then yanked the text that I had killed from buffer 'toto' to point (cursor position) in buffer 'foobar'.</li>
+</ol>
+<p style="float:right"><a href="page2.html">move on...</a></p>
+</div>
+</body>

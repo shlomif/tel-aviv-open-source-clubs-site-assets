@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>content</title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-8-i">
+    <script type="text/javascript">
+    function setdisplay(keyword)
+    {
+        document.getElementById("answer").style.display=keyword;
+    }
+    </script>
+  </head>
+  <body dir="rtl">
+<h1>תיקון גאמא</h1>
+<div>כיצד ניתן להבהיר או להחשיך את התמונה מבלי לגרום לערכי הצבע "לגלוש"?</div>
+<ul style="display: none" id="answer">
+<li>נניח שערך הצבע הגדול ביותר הוא 1 וערכו המינימלי הוא 0.</li>
+<li>נבחר פקטור בשם gamma. פונקציה מהצורה x<sup>1/gamma</sup> שתופעל על ערך הצבע x, לעולם לא תחרוג מהטווח [0,1].</li>
+</ul>
+<div> <a href="javascript:setdisplay('block')">הצג</a> <a href="javascript:setdisplay('none')">הסתר</a></div>
+</body>
+</html>
